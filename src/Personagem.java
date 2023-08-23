@@ -19,9 +19,9 @@ public class Personagem {
 
     public static Personagem criarPoderoso(int poder) {
         if (poder > 100)
-            return new Personagem(10, 100, 10);
+            return new Personagem(10, 100, 3);
         else if (poder < 0)
-            return new Personagem(10, 0, 10);
+            return new Personagem(10, 0, 3);
         return new Personagem(10, poder, 10);
     }
 
@@ -31,5 +31,23 @@ public class Personagem {
         else if (visibilidade < 0)
             return new Personagem(0, 50, 3);
         return new Personagem(visibilidade, 50, 3);
+    }
+
+    public int getVisibilidade() {
+        return visibilidade;
+    }
+
+    public int getPoder() {
+        return poder;
+    }
+
+    public int getVidas() {
+        return vidas;
+    }
+
+    public String toString() {
+        return "Visibilidade: " + visibilidade + "\n" +
+               "Poder: " + poder + "\n" +
+               "Vidas: " + vidas;
     }
 }
